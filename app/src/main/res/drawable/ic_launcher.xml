@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- background hitam -->
+    <path
+        android:fillColor="#0B0D0B"
+        android:pathData="M0,0h108v108h-108z" />
+    <!-- lingkaran gelap -->
+    <path
+        android:fillColor="#141714"
+        android:pathData="M54,8a46,46 0 1,0 0.001,0z" />
+    <!-- huruf V hijau -->
+    <path
+        android:fillColor="#00E676"
+        android:pathData="M28,32 L42,32 L54,64 L66,32 L80,32 L62,76 L46,76 Z" />
+    <!-- play triangle putih -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M60,42 L76,52 L60,62 Z" />
+</vector>

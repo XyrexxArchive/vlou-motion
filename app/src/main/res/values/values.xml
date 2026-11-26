@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Vlou Motion</string>
+
+    <!-- Palet hitam-hijau gaya Alight Motion -->
+    <color name="bg">#0B0D0B</color>
+    <color name="surface">#141714</color>
+    <color name="surfaceAlt">#1D211D</color>
+    <color name="stroke">#2A2F2A</color>
+    <color name="green">#00E676</color>
+    <color name="greenDark">#00B85A</color>
+    <color name="greenSoft">#A5FFC3</color>
+    <color name="textMain">#E8FFE9</color>
+    <color name="textDim">#8FA89A</color>
+    <color name="red">#FF5252</color>
+    <color name="blue">#448AFF</color>
+    <color name="orange">#FFB74D</color>
+    <color name="purple">#B388FF</color>
+
+    <style name="Theme.Vlou" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorOnPrimary">#06130A</item>
+        <item name="colorSecondary">@color/greenDark</item>
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="android:statusBarColor">@color/bg</item>
+        <item name="android:navigationBarColor">@color/surface</item>
+        <item name="android:textColor">@color/textMain</item>
+    </style>
+</resources>

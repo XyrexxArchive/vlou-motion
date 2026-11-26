@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <!-- Top bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/surface"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="12dp"
+        android:paddingEnd="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VLOU"
+            android:textColor="@color/green"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvProjectName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Untitled"
+            android:textColor="@color/textDim"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnUndo"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="Undo"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_marginStart="6dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="Save"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btnExport"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_marginStart="6dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="Export"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Canvas -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.xyrcodex.vloumotion.ui.CanvasView
+            android:id="@+id/canvasView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <!-- Playback bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@color/surface"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
+
+        <Button
+            android:id="@+id/btnPrevFrame"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="-1f"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btnPlay"
+            android:layout_width="64dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="6dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp"
+            android:text="Play"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btnNextFrame"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginStart="6dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="+1f"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:fontFamily="monospace"
+            android:text="0.00s"
+            android:textColor="@color/green"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvZoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100%"
+            android:textColor="@color/textDim"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <!-- Tool bar -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@color/surface"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/toolbarRow"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp" />
+    </HorizontalScrollView>
+
+    <!-- Timeline -->
+    <com.xyrcodex.vloumotion.ui.TimelineView
+        android:id="@+id/timelineView"
+        android:layout_width="match_parent"
+        android:layout_height="205dp" />
+</LinearLayout>
